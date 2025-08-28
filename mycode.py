@@ -9,6 +9,10 @@ data = {
 
 df = pd.DataFrame(data)
 
+#Adding new row to the DataFrame
+new_row = {'name': 'David', 'age': 28, 'city': 'San Francisco'}
+df.loc[len(df.index)] = new_row
+
 #Ensure the "data" directory exists at the root level
 data_dir = 'data'
 os.makedirs(data_dir, exist_ok=True)
